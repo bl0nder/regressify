@@ -4,7 +4,8 @@ Regressify is a multi-task neural network coded from scratch that performs simul
 ## 🛠️ Tools Used
 <img src='https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54'> <img src='https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white'> <img src='https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white'> <img src='https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black'> <img src='https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252'> 
 
-## 📑 Data
+<details>
+  <summary><h2> 📑 Data </h2></summary>
 The neural network has been trained on a dummy dataset of 2 features F1 and F2, and 2 target variables T1 and T2, corresponding to a class label and a regression value respectively. Here is a sample subset of the same:
 
 | F1 | F2 | T1 (class label) | T2 (regression value) |
@@ -17,8 +18,11 @@ The neural network has been trained on a dummy dataset of 2 features F1 and F2, 
 
 - There are **150 samples** in the dataset
 - Each sample belongs to one of **2 classes** where the class ID is either 1 or 2
+</details>
 
-## 🏗️ Neural Network Architecture
+<details>
+<summary><h2>🏗️ Neural Network Architecture</h2></summary>
+  
 ### Input Layer (Layer 0)
 Consists of two neurons, each corresponding to one of the two feature variables, F1 and F2. 
 ### Hidden Layers
@@ -30,8 +34,11 @@ Consists of two neurons, each corresponding to one of the two feature variables,
 - The matrix output by the penultimate layer undergoes:
   + a `sigmoid` function to obtain the respective probabilities of each sample belonging to one of the two classes
   + a `linear` function to obtain regression values corresponding to each sample
+</details>
 
-## ♾️ Math
+<details>
+<summary><h2>♾️ Math</h2></summary>
+  
 ### Forward Propagation
 Used to product an output in the forward direction by sequentially processing the input data through each layer of the neural network. 
 
@@ -79,8 +86,10 @@ $\alpha =$ Learning rate
 Note for the last layer:
 
 $$\frac{\partial C}{\partial Z^{[Last]}} = \frac{\partial C}{\partial A^{[Last]}} \odot g'^{[Last]}(Z^{[Last]})$$ 
+</details>
 
-## 📝 Performance Analysis
+<details>
+<summary> <h2>📝 Performance Analysis </h2></summary>
 
 ### Training
 Classification accuracy: `0.975`
@@ -91,3 +100,5 @@ Regression $R^2$ score: `0.9712041992163881`
 Classification accuracy: `1.0`
 
 Regression $R^2$ score: `0.723742056420074`
+
+</details>
